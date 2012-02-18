@@ -10,6 +10,7 @@ License:        GPLv3
 
 BuildRequires:  pkgconfig
 BuildRequires:  gtkmm2.4-devel glibmm2.4-devel alsa-lib-devel liblo-devel
+BuildRequires:  shared-mime-info
 
 %description
 harmonySEQ is a MIDI sequencer for Linux. Basically, it does what any
