@@ -4,12 +4,14 @@ Release:        1
 Summary:        A MIDI sequencing application helpful for music composers and live artists
 
 Group:          Sound
-Source:         http://launchpad.net/harmonyseq/stable/%{version}/+download/%{name}-%{version}.tar.gz
+Source0:         http://launchpad.net/harmonyseq/stable/%{version}/+download/%{name}-%{version}.tar.gz
 URL:            http://harmonyseq.wordpress.com/
 License:        GPLv3
 
 BuildRequires:  pkgconfig
-BuildRequires:  gtkmm2.4-devel glibmm2.4-devel alsa-lib-devel liblo-devel
+BuildRequires:  pkgconfig(gtkmm-2.4) glibmm2.4-devel
+buildrequires:	pkgconfig(alsa)
+buildrequires:	pkgconfig(liblo)
 BuildRequires:  shared-mime-info
 
 %description
@@ -28,15 +30,11 @@ make
 %check
 
 %install
-rm -rf %{buildroot}
 
 make install DESTDIR=%{buildroot}
 perl -pi -e 's/x-harmonyseq/x-harmonyseq;/g' \
      %{buildroot}/%{_datadir}/applications/harmonyseq.desktop
 %find_lang %{name}
-
-%clean
-rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
@@ -54,3 +52,10 @@ rm -rf %{buildroot}
 %{_datadir}/icons/hicolor/48x48/apps/*
 %{_datadir}/icons/hicolor/scalable/apps/*
 %{_datadir}/mime/packages/*
+
+
+%changelog
+* Sat Feb 18 2012 Frank Kober <emuse@mandriva.org> 0.16-1
++ Revision: 776764
+- imported package harmonySEQ
+
