@@ -1,6 +1,6 @@
 Name:           harmonySEQ
 Version:        0.16
-Release:        1
+Release:        2
 Summary:        A MIDI sequencing application helpful for music composers and live artists
 
 Group:          Sound
