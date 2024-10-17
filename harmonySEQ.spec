@@ -5,7 +5,7 @@ Summary:        A MIDI sequencing application helpful for music composers and li
 
 Group:          Sound
 Source0:         http://launchpad.net/harmonyseq/stable/%{version}/+download/%{name}-%{version}.tar.gz
-URL:            http://harmonyseq.wordpress.com/
+URL:            https://harmonyseq.wordpress.com/
 License:        GPLv3
 
 BuildRequires:  pkgconfig
