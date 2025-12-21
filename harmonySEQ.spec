@@ -8,6 +8,11 @@ Source0:         http://launchpad.net/harmonyseq/stable/%{version}/+download/%{n
 URL:            https://harmonyseq.wordpress.com/
 License:        GPLv3
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(gtkmm-2.4) glibmm2.4-devel
 buildrequires:	pkgconfig(alsa)
